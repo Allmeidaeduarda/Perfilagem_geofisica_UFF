@@ -68,3 +68,10 @@ ARN_gr_rhob_histo2D_30 <- ggplot(subset(perfil, perfil$GR < 115), aes(x=GR, y=DE
   # 	a tabela "perfil" é a base de dados, "prof_m" é a abcissa e "GR" é a ordenada
   geom_hex(bins = 30)
 ARN_gr_rhob_histo2D_30
+
+# Refazer o histograma 2D para Arenito com DRDN < -0.4
+
+ARN_gr_rhob_histo2D_30_DRDN <- ggplot(subset(perfil, perfil$DRDN < -0.4), aes(x=GR, y=DENSIDADE)) + 
+  # 	a tabela "perfil" é a base de dados, "prof_m" é a abcissa e "GR" é a ordenada
+  geom_hex(bins = 30)
+ARN_gr_rhob_histo2D_30_DRDN
